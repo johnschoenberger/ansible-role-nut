@@ -1,0 +1,5 @@
+# {{ ansible_managed }}
+
+{% for ups in nut_ups %}
+MONITOR {{ ups.name }}@{{ nut_host }} "{{ ups.description }}"
+{% endfor %}

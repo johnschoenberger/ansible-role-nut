@@ -1,4 +1,7 @@
 # {{ ansible_managed }}
+RUN_AS_USER root
+
+DEADTIME 25
 
 {% for ups in nut_ups %}
 MONITOR {{ ups.name }}@{{ nut_host }} {{ nut_powervalue }} {{ nut_user }} {{ nut_password }} {{ nut_role }}
